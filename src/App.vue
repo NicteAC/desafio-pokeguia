@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <img class="logo" src="./assets/pokemon-logo.png" />
+    <Pokeguia />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import Pokeguia from "./components/Pokeguia.vue";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Pokeguia,
   },
 };
 </script>
 
-<style lang="scss">
+<style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-image: url("https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.logo {
+  width: 50vh;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>PokeGuía</h1>
-    <v-row>
-      <v-col>
-        <p>Nombre:</p>
+    <h1 class="titulo">PokeGuía</h1>
+    <v-row class="row">
+      <v-col class="columna">
+        <label class="nombre">Busca tu pokemon por nombre:</label>
       </v-col>
       <v-col>
         <v-text-field
@@ -15,13 +15,13 @@
         />
       </v-col>
       <v-col>
-        <v-btn @click="pokeApi">Buscar</v-btn>
+        <v-btn @click="pokeApi" rounded dark>Buscar</v-btn>
       </v-col>
     </v-row>
     <v-row>
       <v-col>
         <img :src="picture" class="imagen" />
-        <h2>{{ pokeName }}</h2>
+        <h2 class="pokename">{{ pokeName }}</h2>
       </v-col>
       <v-col>
         <h2>Movimientos</h2>
@@ -108,12 +108,9 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.titulo {
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 .imagen {
   height: 250px;
@@ -125,5 +122,20 @@ export default {
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
   margin-top: 10px;
+}
+.columna {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 25px;
+  font-weight: bold;
+}
+.pokename {
+  font-size: 30px;
+  margin-top: 9px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 30px;
 }
 </style>
